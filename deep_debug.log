@@ -1,0 +1,101 @@
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 1: ================================================================================
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 2: 开始深度调试和全面测试
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 3: ================================================================================
+[2026-05-25 10:35:47 [INFO] [ANALYSIS] Step 4: 开始系统结构分析
+[2026-05-25 10:35:47 [INFO] [ANALYSIS] Step 5: 核心模块数量: 13 | Details: ['node', 'edge', 'knowledge_graph', 'task_queue', 'agent', 'config', 'logger', 'concurrency', 'metrics', 'plugin', 'profiler', 'cache', 'diagnostics']
+[2026-05-25 10:35:47 [INFO] [ANALYSIS] Step 6: 模块依赖关系分析完成 | Details: {'agent': ['knowledge_graph', 'task_queue', 'logger', 'config', 'plugin'], 'knowledge_graph': ['node', 'edge', 'concurrency', 'logger'], 'plugin': ['agent', 'knowledge_graph', 'task_queue'], 'diagnostics': ['knowledge_graph', 'task_queue', 'agent'], 'concurrency': [], 'cache': [], 'profiler': [], 'task_queue': [], 'node': [], 'edge': []}
+[2026-05-25 10:35:47 [INFO] [TEST] Step 7: 开始数据结构测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 8: 测试 Node 创建
+[2026-05-25 10:35:47 [ERROR] [TEST] Step 9: ✗ FAIL: Node 数据结构测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 10: 测试 Edge 创建
+[2026-05-25 10:35:47 [ERROR] [TEST] Step 11: ✗ FAIL: Edge 数据结构测试 | Details: 'Edge' object has no attribute 'relation'
+[2026-05-25 10:35:47 [INFO] [TEST] Step 12: 数据结构基础测试完成
+[2026-05-25 10:35:47 [INFO] [TEST] Step 13: 数据结构测试完成
+[2026-05-25 10:35:47 [INFO] [TEST] Step 14: 开始知识图谱基础测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 15: 添加节点测试
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 16: 添加节点 node_0
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 17: 添加节点 node_1
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 18: 添加节点 node_2
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 19: 添加节点 node_3
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 20: 添加节点 node_4
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 21: 添加节点 node_5
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 22: 添加节点 node_6
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 23: 添加节点 node_7
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 24: 添加节点 node_8
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 25: 添加节点 node_9
+[2026-05-25 10:35:47 [INFO] [TEST] Step 26: ✓ PASS: 节点添加测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 27: 添加边测试
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 28: 添加边 node_0 -> node_1
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 29: 添加边 node_1 -> node_2
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 30: 添加边 node_2 -> node_3
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 31: 添加边 node_3 -> node_4
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 32: 添加边 node_4 -> node_5
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 33: 添加边 node_5 -> node_6
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 34: 添加边 node_6 -> node_7
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 35: 添加边 node_7 -> node_8
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 36: 添加边 node_8 -> node_9
+[2026-05-25 10:35:47 [INFO] [TEST] Step 37: ✓ PASS: 边添加测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 38: 节点和边查询测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 39: ✓ PASS: 节点和边查询测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 40: 保存和加载测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 41: ✓ PASS: 知识图谱保存和加载测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 42: 开始任务队列测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 43: 添加单个任务测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 44: ✓ PASS: 单个任务添加测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 45: 批量任务添加测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 46: ✓ PASS: 批量任务添加测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 47: 任务弹出测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 48: ✓ PASS: 任务弹出测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 49: 任务队列测试完成
+[2026-05-25 10:35:47 [INFO] [TEST] Step 50: 开始复杂场景测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 51: 大规模知识图谱测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 52: 添加 1000 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 53: 已添加 0 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 54: 已添加 100 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 55: 已添加 200 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 56: 已添加 300 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 57: 已添加 400 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 58: 已添加 500 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 59: 已添加 600 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 60: 已添加 700 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 61: 已添加 800 个节点
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 62: 已添加 900 个节点
+[2026-05-25 10:35:47 [INFO] [TEST] Step 63: ✓ PASS: 大规模节点添加测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 64: 添加 2000 条边
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 65: 已添加 200 条边
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 66: 已添加 400 条边
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 67: 已添加 600 条边
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 68: 已添加 800 条边
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 69: 已添加 1000 条边
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 70: 已添加 1200 条边
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 71: 已添加 1400 条边
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 72: 已添加 1600 条边
+[2026-05-25 10:35:47 [DEBUG] [KG] Step 73: 已添加 1800 条边
+[2026-05-25 10:35:47 [INFO] [TEST] Step 74: ✓ PASS: 大规模边添加测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 75: 复杂场景测试完成
+[2026-05-25 10:35:47 [INFO] [TEST] Step 76: 开始并发操作测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 77: 启动 10 个并发线程
+[2026-05-25 10:35:47 [INFO] [TEST] Step 78: ✓ PASS: 并发操作测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 79: 开始边界条件测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 80: 测试空字符串节点
+[2026-05-25 10:35:47 [WARNING] [TEST] Step 81: 添加空字符串节点
+[2026-05-25 10:35:47 [ERROR] [TEST] Step 82: ✗ FAIL: 边界条件测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 83: 开始智能体完整工作流测试
+[2026-05-25 10:35:47 [INFO] [TEST] Step 84: 添加知识和任务
+[2026-05-25 10:35:47 [INFO] [TEST] Step 85: 执行任务
+[2026-05-25 10:35:47 [INFO] [TEST] Step 86: ✓ PASS: 智能体完整工作流测试
+[2026-05-25 10:35:47 [ERROR] [TEST] Step 87: ✗ FAIL: 智能体工作流测试
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 88: ================================================================================
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 89: 测试完成总结
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 90: 总耗时: 0.04秒
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 91: 测试通过: 11
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 92: 测试失败: 4
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 93: 错误数: 4
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 94: 警告数: 1
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 95: 发现的问题:
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 96:   1. ERROR: TEST - ✗ FAIL: Node 数据结构测试
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 97:   2. ERROR: TEST - ✗ FAIL: Edge 数据结构测试
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 98:   3. WARNING: TEST - 添加空字符串节点
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 99:   4. ERROR: TEST - ✗ FAIL: 边界条件测试
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 100:   5. ERROR: TEST - ✗ FAIL: 智能体工作流测试
+[2026-05-25 10:35:47 [INFO] [MAIN] Step 101: ================================================================================

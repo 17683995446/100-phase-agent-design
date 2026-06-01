@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "loop_delay": 0.001,
+  "evolve_step": 10,
+  "task_queue_max": 200,
+  "weight_threshold": 0.1,
+  "kg_save_path": "/tmp/tmpmc625qyi.json",
+  "log_path": "/tmp/tmp13vnz5gt.txt",
+  "last_run_timestamp": 1780289486.0415194
+}

@@ -1,0 +1,594 @@
+{
+  "static_analysis": {
+    "files": {
+      "node": {
+        "lines": 41,
+        "classes": [
+          "Node"
+        ],
+        "functions": [
+          "to_dict",
+          "from_dict"
+        ],
+        "imports": [
+          "from typing import Optional",
+          "import time"
+        ]
+      },
+      "agent": {
+        "lines": 546,
+        "classes": [
+          "EternalSelfAgent"
+        ],
+        "functions": [
+          "save_config",
+          "update_config",
+          "restore_state",
+          "save_full_state",
+          "health_check",
+          "self_repair",
+          "get_current_task",
+          "idle_self_evolve",
+          "perform_deep_reflection",
+          "perform_knowledge_synthesis",
+          "log_event",
+          "execute_task",
+          "eternal_loop",
+          "shutdown",
+          "get_system_status",
+          "print_status_report",
+          "enhanced_health_check",
+          "get_metrics",
+          "export_metrics_json",
+          "register_plugin",
+          "unregister_plugin",
+          "list_plugins",
+          "register_task_handler",
+          "inject_external_knowledge",
+          "add_manual_task",
+          "find_related_tasks"
+        ],
+        "imports": [
+          "import time",
+          "import os",
+          "import json",
+          "import traceback",
+          "import gc",
+          "import sys",
+          "from typing import Optional, List",
+          "from .knowledge_graph import KnowledgeGraph",
+          "from .task_queue import TaskQueue",
+          "from .config import ConfigManager",
+          "from .metrics import MetricsCollector",
+          "from .plugin import PluginManager, BasePlugin",
+          "import psutil",
+          "import resource",
+          "from .plugin import KnowledgeProcessorPlugin",
+          "from .plugin import KnowledgeProcessorPlugin"
+        ]
+      },
+      "task_queue": {
+        "lines": 188,
+        "classes": [
+          "TaskQueue",
+          "ConcurrentTaskQueue"
+        ],
+        "functions": [
+          "max_size",
+          "max_size",
+          "add",
+          "batch_add",
+          "pop",
+          "peek",
+          "is_empty",
+          "is_full",
+          "size",
+          "get_all",
+          "clear",
+          "clear_history",
+          "is_processed",
+          "get_history_size",
+          "max_size",
+          "max_size",
+          "add",
+          "batch_add",
+          "pop",
+          "peek",
+          "is_empty",
+          "is_full",
+          "size",
+          "get_all",
+          "clear",
+          "clear_history",
+          "is_processed",
+          "get_history_size"
+        ],
+        "imports": [
+          "from collections import deque",
+          "import threading",
+          "from typing import List, Optional, Set",
+          "from .concurrency import ReadWriteLock"
+        ]
+      },
+      "metrics": {
+        "lines": 128,
+        "classes": [
+          "Counter",
+          "Gauge",
+          "MetricsCollector"
+        ],
+        "functions": [
+          "inc",
+          "get",
+          "to_dict",
+          "set",
+          "inc",
+          "dec",
+          "get",
+          "to_dict",
+          "counter",
+          "gauge",
+          "export",
+          "export_json",
+          "get_uptime",
+          "reset"
+        ],
+        "imports": [
+          "import time",
+          "import threading",
+          "from typing import Dict, Any, List, Optional",
+          "import json"
+        ]
+      },
+      "profiler": {
+        "lines": 230,
+        "classes": [
+          "PerformanceMetric",
+          "PerformanceProfiler"
+        ],
+        "functions": [
+          "avg_time",
+          "calls_per_second",
+          "enable",
+          "disable",
+          "reset",
+          "record",
+          "get_metric",
+          "get_all_metrics",
+          "get_top_slowest",
+          "get_top_most_called",
+          "profile",
+          "my_function",
+          "another_function",
+          "decorator",
+          "wrapper",
+          "report",
+          "get_profiler",
+          "profile",
+          "my_function"
+        ],
+        "imports": [
+          "import time",
+          "import threading",
+          "from typing import Dict, List, Optional, Callable",
+          "from dataclasses import dataclass, field",
+          "from functools import wraps"
+        ]
+      },
+      "plugin": {
+        "lines": 198,
+        "classes": [
+          "BasePlugin",
+          "TaskHandlerPlugin",
+          "KnowledgeProcessorPlugin",
+          "PluginManager"
+        ],
+        "functions": [
+          "initialize",
+          "shutdown",
+          "is_initialized",
+          "is_enabled",
+          "set_enabled",
+          "get_task_handlers",
+          "on_node_added",
+          "on_edge_added",
+          "register_plugin",
+          "unregister_plugin",
+          "initialize_plugins",
+          "shutdown_plugins",
+          "get_plugin",
+          "list_plugins",
+          "get_task_handlers"
+        ],
+        "imports": [
+          "import threading",
+          "from typing import Dict, List, Any, Optional, Callable",
+          "from abc import ABC, abstractmethod"
+        ]
+      },
+      "diagnostics": {
+        "lines": 356,
+        "classes": [
+          "DiagnosticResult",
+          "SystemDiagnostics"
+        ],
+        "functions": [
+          "register_check",
+          "unregister_check",
+          "run_all_checks",
+          "run_check",
+          "get_summary",
+          "generate_report",
+          "diagnose_agent",
+          "check_agent_status",
+          "check_knowledge_graph",
+          "check_task_queue"
+        ],
+        "imports": [
+          "import time",
+          "import sys",
+          "import gc",
+          "import os",
+          "from typing import Dict, List, Any, Optional, Callable",
+          "from dataclasses import dataclass, field",
+          "from datetime import datetime",
+          "from collections import defaultdict",
+          "from core.knowledge_graph import KnowledgeGraph",
+          "from core.task_queue import TaskQueue",
+          "from core.agent import EternalSelfAgent"
+        ]
+      },
+      "config": {
+        "lines": 137,
+        "classes": [
+          "ConfigManager"
+        ],
+        "functions": [
+          "load",
+          "save",
+          "get_default_config",
+          "get",
+          "set",
+          "get_all",
+          "validate_config",
+          "reset_to_default",
+          "get_last_save_time"
+        ],
+        "imports": [
+          "import os",
+          "import json",
+          "import time",
+          "from typing import Dict, Any, Optional"
+        ]
+      },
+      "edge": {
+        "lines": 51,
+        "classes": [
+          "Edge"
+        ],
+        "functions": [
+          "to_dict",
+          "from_dict"
+        ],
+        "imports": [
+          "from typing import Optional",
+          "import time"
+        ]
+      },
+      "concurrency": {
+        "lines": 281,
+        "classes": [
+          "ReadWriteLock",
+          "ReadContextManager",
+          "WriteContextManager",
+          "ThreadSafeDict",
+          "ThreadSafeList",
+          "AtomicCounter"
+        ],
+        "functions": [
+          "acquire_read",
+          "release_read",
+          "acquire_write",
+          "release_write",
+          "read_lock",
+          "write_lock",
+          "get",
+          "setdefault",
+          "pop",
+          "clear",
+          "keys",
+          "values",
+          "items",
+          "update",
+          "copy",
+          "append",
+          "extend",
+          "insert",
+          "pop",
+          "remove",
+          "clear",
+          "index",
+          "count",
+          "copy",
+          "sort",
+          "reverse",
+          "value",
+          "increment",
+          "decrement",
+          "get_and_increment",
+          "get_and_decrement",
+          "compare_and_set",
+          "reset"
+        ],
+        "imports": [
+          "import threading",
+          "from typing import Generic, TypeVar, Dict, List, Optional, Any"
+        ]
+      },
+      "knowledge_graph": {
+        "lines": 948,
+        "classes": [
+          "KnowledgeGraph",
+          "ConcurrentKnowledgeGraph"
+        ],
+        "functions": [
+          "add_node",
+          "register_on_node_add",
+          "register_on_edge_add",
+          "unregister_on_node_add",
+          "unregister_on_edge_add",
+          "get_node",
+          "has_node",
+          "delete_node",
+          "update_node",
+          "add_edge",
+          "update_edge_weight",
+          "get_edges_from_node",
+          "get_edges_to_node",
+          "get_all_edges_from",
+          "delete_edge",
+          "save",
+          "load",
+          "get_node_count",
+          "get_edge_count",
+          "clear",
+          "trim_invalid_knowledge",
+          "find_highest_value_nodes",
+          "derive_new_tasks",
+          "get_stats",
+          "inject_external_knowledge",
+          "find_related_nodes",
+          "compute_similarity",
+          "find_similar_nodes",
+          "compute_node_importance",
+          "get_most_important_nodes",
+          "find_paths",
+          "aggregate_path_weight",
+          "get_changelog",
+          "get_version",
+          "get_changes_since_last_save",
+          "reset_changelog",
+          "has_changes",
+          "add_node",
+          "get_node",
+          "has_node",
+          "delete_node",
+          "update_node",
+          "add_edge",
+          "get_edges_from_node",
+          "get_edges_to_node",
+          "get_all_edges_from",
+          "get_node_count",
+          "get_edge_count",
+          "clear",
+          "save",
+          "load",
+          "trim_invalid_knowledge",
+          "perform_deep_reflection",
+          "find_related_nodes",
+          "inject_external_knowledge",
+          "compute_similarity",
+          "find_similar_nodes",
+          "compute_node_importance",
+          "get_most_important_nodes",
+          "find_paths",
+          "aggregate_path_weight",
+          "get_changelog",
+          "get_version",
+          "get_changes_since_last_save",
+          "reset_changelog",
+          "has_changes",
+          "nodes",
+          "edges"
+        ],
+        "imports": [
+          "import os",
+          "import json",
+          "import shutil",
+          "import time",
+          "import threading",
+          "from typing import Dict, List, Optional, Set, Callable",
+          "from .node import Node",
+          "from .edge import Edge",
+          "from collections import deque"
+        ]
+      },
+      "cache": {
+        "lines": 201,
+        "classes": [
+          "CacheEntry",
+          "LRUCache"
+        ],
+        "functions": [
+          "get",
+          "set",
+          "delete",
+          "clear",
+          "get_stats",
+          "lru_cache_decorator",
+          "expensive_function",
+          "decorator",
+          "wrapper",
+          "get_default_cache"
+        ],
+        "imports": [
+          "import time",
+          "import threading",
+          "from typing import Dict, Any, Optional, Callable",
+          "from dataclasses import dataclass",
+          "from functools import wraps"
+        ]
+      },
+      "logger": {
+        "lines": 95,
+        "classes": [
+          "DeepLogger"
+        ],
+        "functions": [
+          "trace",
+          "info",
+          "warn",
+          "error",
+          "debug",
+          "clear_log",
+          "get_stats",
+          "get_logger"
+        ],
+        "imports": [
+          "import os",
+          "import time",
+          "import sys",
+          "from typing import Optional",
+          "from datetime import datetime",
+          "import traceback"
+        ]
+      }
+    },
+    "modules": [
+      "node",
+      "agent",
+      "task_queue",
+      "metrics",
+      "profiler",
+      "plugin",
+      "diagnostics",
+      "config",
+      "edge",
+      "concurrency",
+      "knowledge_graph",
+      "cache",
+      "logger"
+    ],
+    "class_count": 28,
+    "function_count": 244
+  },
+  "data_structures": {
+    "Node": {
+      "basic_creation": true,
+      "attributes": true,
+      "serialization": true
+    },
+    "Edge": {
+      "basic_creation": true,
+      "has_relation_name": true,
+      "has_weight": true,
+      "serialization": true
+    },
+    "KnowledgeGraph": {},
+    "TaskQueue": {}
+  },
+  "boundary_conditions": {
+    "edge_weights": [
+      {
+        "weight": 0.0,
+        "valid": true
+      },
+      {
+        "weight": 0.001,
+        "valid": true
+      },
+      {
+        "weight": 0.5,
+        "valid": true
+      },
+      {
+        "weight": 0.999,
+        "valid": true
+      },
+      {
+        "weight": 1.0,
+        "valid": true
+      },
+      {
+        "weight": -0.1,
+        "valid": false,
+        "expected_error": true
+      },
+      {
+        "weight": 1.1,
+        "valid": false,
+        "expected_error": true
+      },
+      {
+        "weight": 100.0,
+        "valid": false,
+        "expected_error": true
+      }
+    ],
+    "node_names": [
+      {
+        "name": "",
+        "added": true
+      }
+    ],
+    "task_operations": [],
+    "concurrent_access": []
+  },
+  "performance": {
+    "scaling_100_nodes": {
+      "time": 0.0001823902130126953,
+      "success": true
+    },
+    "scaling_1000_nodes": {},
+    "scaling_100_edges": {
+      "time": 0.0003745555877685547,
+      "success": true
+    },
+    "scaling_1000_edges": {}
+  },
+  "concurrency": {
+    "rwlock_test": {
+      "success": true,
+      "time": 0.010713577270507812
+    },
+    "threadsafe_dict": {
+      "success": true,
+      "entries": 500
+    },
+    "threadsafe_list": {},
+    "atomic_counter": {},
+    "concurrent_kg": {
+      "success": true,
+      "nodes": 250
+    }
+  },
+  "workflow": {
+    "agent_lifecycle": {
+      "created": true,
+      "shutdown": true
+    },
+    "knowledge_evolution": {
+      "nodes_added": 10
+    },
+    "task_execution": {
+      "tasks_added": 5,
+      "tasks_executed": 7
+    }
+  },
+  "summary": {
+    "total_modules": 13,
+    "total_classes": 28,
+    "total_functions": 244,
+    "issues_found": 0
+  }
+}

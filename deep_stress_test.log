@@ -1,0 +1,38 @@
+[2026-05-24 10:10:06.559 [INFO] [TRACE:00000001] [DeepStressTester] ============================================================
+[2026-05-24 10:10:06.559 [INFO] [TRACE:00000002] [DeepStressTester] 开始深度压力测试
+[2026-05-24 10:10:06.559 [INFO] [TRACE:00000003] [DeepStressTester] ============================================================
+[2026-05-24 10:10:06.559 [INFO] [TRACE:00000004] [DeepStressTester] 初始化测试环境 | temp_dir=/tmp/tmpufr261un
+[2026-05-24 10:10:06.560 [INFO] [TRACE:00000005] [DeepStressTester] 开始阶段1: 基础负载测试
+[2026-05-24 10:10:06.690 [INFO] [TRACE:00000006] [DeepStressTester] 阶段1完成 | executed=500
+[2026-05-24 10:10:06.690 [INFO] [TRACE:00000007] [DeepStressTester] 开始阶段2: 大规模知识网络测试
+[2026-05-24 10:10:06.690 [INFO] [TRACE:00000008] [ChaosGenerator] 开始生成大规模知识网络 | target_nodes=5000
+[2026-05-24 10:10:06.690 [DEBUG] [TRACE:00000009] [ChaosGenerator] 已添加 0 个节点
+[2026-05-24 10:10:06.692 [DEBUG] [TRACE:00000010] [ChaosGenerator] 已添加 1000 个节点
+[2026-05-24 10:10:06.694 [DEBUG] [TRACE:00000011] [ChaosGenerator] 已添加 2000 个节点
+[2026-05-24 10:10:06.697 [DEBUG] [TRACE:00000012] [ChaosGenerator] 已添加 3000 个节点
+[2026-05-24 10:10:06.701 [DEBUG] [TRACE:00000013] [ChaosGenerator] 已添加 4000 个节点
+[2026-05-24 10:10:06.718 [DEBUG] [TRACE:00000014] [ChaosGenerator] 已添加 5000 条边
+[2026-05-24 10:10:06.731 [DEBUG] [TRACE:00000015] [ChaosGenerator] 已添加 10000 条边
+[2026-05-24 10:10:06.744 [DEBUG] [TRACE:00000016] [ChaosGenerator] 已添加 15000 条边
+[2026-05-24 10:10:06.756 [DEBUG] [TRACE:00000017] [ChaosGenerator] 已添加 20000 条边
+[2026-05-24 10:10:06.769 [DEBUG] [TRACE:00000018] [ChaosGenerator] 已添加 25000 条边
+[2026-05-24 10:10:06.769 [INFO] [TRACE:00000019] [ChaosGenerator] 大规模知识网络生成完成 | nodes=6000, edges=25498
+[2026-05-24 10:10:06.770 [INFO] [TRACE:00000020] [DeepStressTester] 阶段2完成 | query_time=0.0005686283111572266
+[2026-05-24 10:10:06.770 [INFO] [TRACE:00000021] [DeepStressTester] 开始阶段3: 混乱任务处理测试
+[2026-05-24 10:10:06.770 [INFO] [TRACE:00000022] [ChaosGenerator] 开始生成混乱任务 | target_tasks=3000
+[2026-05-24 10:10:06.770 [DEBUG] [TRACE:00000023] [ChaosGenerator] 已尝试添加 0 个任务，成功 1 个
+[2026-05-24 10:10:06.788 [DEBUG] [TRACE:00000024] [ChaosGenerator] 已尝试添加 500 个任务，成功 420 个
+[2026-05-24 10:10:06.806 [DEBUG] [TRACE:00000025] [ChaosGenerator] 已尝试添加 1000 个任务，成功 723 个
+[2026-05-24 10:10:06.825 [DEBUG] [TRACE:00000026] [ChaosGenerator] 已尝试添加 1500 个任务，成功 955 个
+[2026-05-24 10:10:06.843 [DEBUG] [TRACE:00000027] [ChaosGenerator] 已尝试添加 2000 个任务，成功 1135 个
+[2026-05-24 10:10:06.862 [DEBUG] [TRACE:00000028] [ChaosGenerator] 已尝试添加 2500 个任务，成功 1300 个
+[2026-05-24 10:10:06.881 [INFO] [TRACE:00000029] [ChaosGenerator] 混乱任务生成完成 | added=1442, queue_size=2942
+[2026-05-24 10:10:22.144 [INFO] [TRACE:00000030] [DeepStressTester] 阶段3完成 | executed=2000, time=15.262758255004883
+[2026-05-24 10:10:22.144 [INFO] [TRACE:00000031] [DeepStressTester] 开始阶段4: 边界情况测试
+[2026-05-24 10:10:22.144 [INFO] [TRACE:00000032] [ChaosGenerator] 开始注入边界情况
+[2026-05-24 10:10:22.145 [INFO] [TRACE:00000033] [ChaosGenerator] 边界情况注入完成
+[2026-05-24 10:10:22.145 [INFO] [TRACE:00000034] [ChaosGenerator] 开始模拟故障场景
+[2026-05-24 10:10:57.347 [INFO] [TRACE:00000035] [ChaosGenerator] 故障场景模拟完成
+[2026-05-24 10:10:57.347 [INFO] [TRACE:00000036] [DeepStressTester] 阶段4完成
+[2026-05-24 10:10:57.347 [INFO] [TRACE:00000037] [DeepStressTester] 开始阶段5: 长时间运行模拟
+[2026-05-24 10:11:07.537 [INFO] [TRACE:00000038] [DeepStressTester] 阶段5完成

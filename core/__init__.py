@@ -66,6 +66,11 @@ from .error_handler import (
     AgentError, ValidationError, NotFoundError,
     AuthorizationError, ConflictError, ErrorHandler, safe_call
 )
+from .auto_evolution import (
+    EvolutionState, EvolutionAction, EvolutionFeedback,
+    PerceptionModule, DecisionEngine, ExecutionModule,
+    LearningModule, MetaLearningModule, AutoEvolutionEngine
+)
 
 __all__ = [
     'Node', 'Edge', 'KnowledgeGraph', 'ConcurrentKnowledgeGraph', 
@@ -113,5 +118,8 @@ __all__ = [
     'KnowledgeGraphBenchmark', 'PerformanceMonitor',
     'SystemLogger', 'get_system_logger',
     'AgentError', 'ValidationError', 'NotFoundError',
-    'AuthorizationError', 'ConflictError', 'ErrorHandler', 'safe_call'
+    'AuthorizationError', 'ConflictError', 'ErrorHandler', 'safe_call',
+    'EvolutionState', 'EvolutionAction', 'EvolutionFeedback',
+    'PerceptionModule', 'DecisionEngine', 'ExecutionModule',
+    'LearningModule', 'MetaLearningModule', 'AutoEvolutionEngine'
 ]

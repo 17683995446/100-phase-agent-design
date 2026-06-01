@@ -722,10 +722,27 @@ class AgentAPI:
         response = self.api.handle_request(path, method, params, headers, auth_token)
         return response.to_dict()
     
+    def health_check(self) -> Dict[str, Any]:
+        """
+        健康检查
+
+        功能：返回系统健康状态，用于 Docker 健康检查
+
+        Returns:
+            健康状态字典
+        """
+        return {
+            "status": "healthy",
+            "agent_initialized": self.agent is not None,
+            "api_endpoints": self.api.get_stats()["endpoints"],
+            "cli_commands": len(self.cli.get_commands()),
+            "timestamp": time.time()
+        }
+
     def handle_cli_command(self, command_line: str) -> str:
         """
         处理 CLI 命令
-        
+
         Returns:
             命令输出
         """

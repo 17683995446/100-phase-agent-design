@@ -46,6 +46,26 @@ from .nlp import (
     SimpleTokenizer, EntityExtractor, TextSimilarity,
     NLQueryConverter, text_to_knowledge_graph
 )
+from .ml import (
+    ModelType, ModelStatus, ModelInfo,
+    BaseModel, SimpleClassifier, FeatureExtractor, ModelManager
+)
+from .graph_algorithms import GraphAlgorithms
+from .data_exchange import DataExchange
+from .query_language import (
+    QueryParser, QueryExecutor, QueryEngine,
+    QueryResult, QueryParseError
+)
+from .version_control import VersionControl, Snapshot, Branch
+from .benchmark import (
+    BenchmarkResult, BenchmarkRunner,
+    KnowledgeGraphBenchmark, PerformanceMonitor
+)
+from .system_logger import SystemLogger, get_system_logger
+from .error_handler import (
+    AgentError, ValidationError, NotFoundError,
+    AuthorizationError, ConflictError, ErrorHandler, safe_call
+)
 
 __all__ = [
     'Node', 'Edge', 'KnowledgeGraph', 'ConcurrentKnowledgeGraph', 
@@ -81,5 +101,17 @@ __all__ = [
     'ResponseStatus', 'APIResponse', 'APIEndpoint', 'APIManager',
     'CLICommand', 'CLIInterface', 'AgentAPI',
     'SimpleTokenizer', 'EntityExtractor', 'TextSimilarity',
-    'NLQueryConverter', 'text_to_knowledge_graph'
+    'NLQueryConverter', 'text_to_knowledge_graph',
+    'ModelType', 'ModelStatus', 'ModelInfo',
+    'BaseModel', 'SimpleClassifier', 'FeatureExtractor', 'ModelManager',
+    'GraphAlgorithms',
+    'DataExchange',
+    'QueryParser', 'QueryExecutor', 'QueryEngine',
+    'QueryResult', 'QueryParseError',
+    'VersionControl', 'Snapshot', 'Branch',
+    'BenchmarkResult', 'BenchmarkRunner',
+    'KnowledgeGraphBenchmark', 'PerformanceMonitor',
+    'SystemLogger', 'get_system_logger',
+    'AgentError', 'ValidationError', 'NotFoundError',
+    'AuthorizationError', 'ConflictError', 'ErrorHandler', 'safe_call'
 ]

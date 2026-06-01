@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  knowledge-graph-agent:
+    build: .
+    container_name: kg-agent
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONPATH=/app
+      - KG_DATA_PATH=/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.path.insert(0, '.'); from core.api import AgentAPI; api = AgentAPI(); print('OK')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    restart: unless-stopped
+
+  # 可选：监控服务
+  monitor:
+    build: .
+    container_name: kg-monitor
+    command: python -c "from core.benchmark import KnowledgeGraphBenchmark, PerformanceMonitor; print('Monitor ready')"
+    depends_on:
+      - knowledge-graph-agent
+    profiles:
+      - monitoring
